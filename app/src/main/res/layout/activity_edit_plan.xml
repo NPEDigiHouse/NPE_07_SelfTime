@@ -56,7 +56,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"/>
     <EditText
-        android:id="@+id/et_judul_add"
+        android:id="@+id/et_judul_update"
         android:layout_width="match_parent"
         android:layout_marginTop="10dp"
         android:layout_height="50dp"
@@ -80,7 +80,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"/>
     <EditText
-        android:id="@+id/et_keterangan_add"
+        android:id="@+id/et_keterangan_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/catatan"
