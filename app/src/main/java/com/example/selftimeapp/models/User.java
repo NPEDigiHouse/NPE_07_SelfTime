@@ -4,6 +4,8 @@ public class User {
     String name;
     String email;
 
+
+
     public String getName() {
         return name;
     }

@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String name = snapshot.child("name").getValue(String.class);
                 tvNama.setText(name);
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
             }
