@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.selftimeapp.R;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
@@ -58,8 +59,9 @@ public class AddPlanActivity extends AppCompatActivity implements View.OnClickLi
         // add note data to firebase
         FirebaseDatabase.getInstance().getReference()
                 .child("users")
+                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .child("plans")
-                .child(etJudul.getText().toString())
+                .push()
                 .setValue(noteMap)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override

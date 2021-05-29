@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.selftimeapp.R;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -71,6 +72,7 @@ public class EditPlanActivity extends AppCompatActivity implements View.OnClickL
         String newKeterangan = etKeterangan.getText().toString();
         DatabaseReference userPlansRef = FirebaseDatabase.getInstance().getReference()
                 .child("users")
+                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .child("plans");
         userPlansRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
