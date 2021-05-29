@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "16583342779",
+    "project_id": "selftimeapp-45ccb",
+    "storage_bucket": "selftimeapp-45ccb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16583342779:android:a626d5ffc991be78a6079e",
+        "android_client_info": {
+          "package_name": "com.example.selftimeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16583342779-tpcgjohk3jjcig411qdj24phnnvv7n5v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.selftimeapp",
+            "certificate_hash": "7517b57bbb1fa744b822b3f16e1df18e529f0540"
+          }
+        },
+        {
+          "client_id": "16583342779-l69pvnv98hklnch4mn9a61ejo89qq5oc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhBPPkjuMuekdQRwYfgfsyq7cPJ72YvFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "16583342779-l69pvnv98hklnch4mn9a61ejo89qq5oc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
