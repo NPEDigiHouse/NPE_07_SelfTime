@@ -54,7 +54,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.register:
                 register();
-                        break;
+                break;
         }
     }
 
@@ -68,13 +68,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     etName.requestFocus();
                     return;
                 }
-
                 if (email.isEmpty()){
                     etEmail.setError("email is required");
                     etEmail.requestFocus();
                     return;
                 }
-
                 if (password.isEmpty()){
                     etPassword.setError("password is required");
                     etPassword.requestFocus();
