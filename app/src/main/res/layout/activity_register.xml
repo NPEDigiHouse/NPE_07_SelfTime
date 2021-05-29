@@ -67,6 +67,7 @@
             app:errorEnabled="true"
             app:hintTextColor="@color/blue1">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
@@ -85,6 +86,7 @@
             app:hintTextColor="@color/blue2">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
@@ -103,7 +105,7 @@
             app:hintTextColor="@color/blue2">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/passwordTF"
+                android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -122,6 +124,7 @@
             app:hintTextColor="@color/blue2">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_confirm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
