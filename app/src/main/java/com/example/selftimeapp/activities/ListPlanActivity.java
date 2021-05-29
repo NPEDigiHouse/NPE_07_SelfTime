@@ -49,7 +49,27 @@ public class ListPlanActivity extends AppCompatActivity implements MyNoteAdapter
     }
 
     private void updateList() {
+        // get tim reference
+        DatabaseReference userPlansRef = FirebaseDatabase.getInstance().getReference()
+                .child("teams");
+        userPlansRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot data : snapshot.getChildren()) {
+                    // update the adapter's list
+                    Note note = new Note();
+                    note.setJudul(data.child("judul").getValue().toString());
+                    note.setKeterangan(data.child("keterangan").getValue().toString());
+                    list.add(note);
+                }
+                adapter.notifyDataSetChanged();
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(ListPlanActivity.this, "Terjadi kesalahan pada database.", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
