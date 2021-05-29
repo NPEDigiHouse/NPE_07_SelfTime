@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // auth
         mAuth = FirebaseAuth.getInstance();
-        reference = FirebaseDatabase.getInstance().getReference("User");
+        reference = FirebaseDatabase.getInstance().getReference("users");
 
         toNote = findViewById(R.id.ll_note);
         toMeet = findViewById(R.id.ll_video_conf);

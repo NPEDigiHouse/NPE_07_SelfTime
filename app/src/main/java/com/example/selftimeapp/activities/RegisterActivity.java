@@ -84,7 +84,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     etConfirm.requestFocus();
                     return;
                 }
-                if (password.equals(confirm)){
+                if (!password.equals(confirm)){
                     etPassword.setError("password not matched");
                     etPassword.requestFocus();
                     return;
