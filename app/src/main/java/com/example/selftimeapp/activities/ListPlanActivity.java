@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.selftimeapp.R;
@@ -38,7 +39,10 @@ public class ListPlanActivity extends AppCompatActivity implements MyNoteAdapter
 
     @Override
     public void btnEditClicked(int position) {
-
+        Intent goToEdit = new Intent(ListPlanActivity.this, EditPlanActivity.class);
+        goToEdit.putExtra(EditPlanActivity.EXTRA_JUDUL, list.get(position).getJudul());
+        goToEdit.putExtra(EditPlanActivity.EXTRA_KETERANGAN, list.get(position).getKeterangan());
+        startActivity(goToEdit);
     }
 
     @Override
