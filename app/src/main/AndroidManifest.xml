@@ -13,11 +13,9 @@
         <activity android:name=".activities.ListPlanActivity" />
         <activity android:name=".activities.AddPlanActivity" />
         <activity android:name=".activities.RegisterActivity" />
-        <activity
-            android:name=".activities.LoginActivity"
-            android:label="@string/title_activity_login"
-            android:theme="@style/Theme.SelfTimeApp.NoActionBar" />
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.MainActivity"/>
+        <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
