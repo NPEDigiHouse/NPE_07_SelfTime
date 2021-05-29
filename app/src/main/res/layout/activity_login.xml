@@ -70,6 +70,7 @@
             app:hintTextColor="@color/blue2">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
@@ -89,7 +90,7 @@
             app:hintTextColor="@color/blue2">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/passwordTF"
+                android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -98,7 +99,7 @@
 
 
         <Button
-            android:id="@+id/register"
+            android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20sp"
