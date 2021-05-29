@@ -43,6 +43,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 FirebaseUser u = LoginActivity.this.mAuth.getCurrentUser();
                 if (u != null) {
                     startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                    finish();
                 }
             }
         };

@@ -25,10 +25,13 @@
         android:layout_height="wrap_content"
         android:text="Ket catatan"
         android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:maxLines="1"
+        android:ellipsize="end"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_nama_catatan"
-        app:layout_constraintEnd_toStartOf="@id/ib_trash"
+        app:layout_constraintEnd_toStartOf="@id/ib_edit"
         />
 
     <ImageButton

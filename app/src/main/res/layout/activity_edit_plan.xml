@@ -56,10 +56,14 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"/>
     <EditText
-        android:id="@+id/et_judul_update"
+        android:id="@+id/et_judul_add"
         android:layout_width="match_parent"
         android:layout_marginTop="10dp"
         android:layout_height="50dp"
+        android:maxLines="1"
+        android:overScrollMode="always"
+        android:paddingHorizontal="10dp"
+        android:hint="Contoh: Catatan Math"
         android:background="@drawable/backgrdoun_text"
         app:layout_constraintTop_toBottomOf="@id/judul"
         android:layout_marginHorizontal="10dp"/>
@@ -71,12 +75,12 @@
         android:text="Catatan"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_judul_update"
+        app:layout_constraintTop_toBottomOf="@id/et_judul_add"
         android:textStyle="bold"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"/>
     <EditText
-        android:id="@+id/et_keterangan_update"
+        android:id="@+id/et_keterangan_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/catatan"
@@ -84,10 +88,9 @@
         android:padding="10dp"
         android:layout_marginBottom="10dp"
         android:hint="Multiline Edit Text"
-        android:fontFamily="sans-serif-condensed"
-        android:background="#d3d7b6"
+        android:background="@drawable/backgrdoun_text"
         android:minLines="3"
-        android:maxLines="5"
+        android:maxLines="6"
         android:scrollbars="vertical"
         android:inputType="textMultiLine"
         />
