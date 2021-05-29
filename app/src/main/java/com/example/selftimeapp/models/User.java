@@ -1,4 +1,4 @@
-package com.example.selftimeapp.activities;
+package com.example.selftimeapp.models;
 
 public class User {
     String name;

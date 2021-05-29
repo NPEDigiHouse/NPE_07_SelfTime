@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.selftimeapp.R;
+import com.example.selftimeapp.models.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -61,6 +62,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 String email = etEmail.getText().toString();
                 String password = etPassword.getText().toString();
                 String fullName = etName.getText().toString();
+                String confirm = etConfirm.getText().toString();
                 if (fullName.isEmpty()){
                     etName.setError("name is required");
                     etName.requestFocus();
@@ -72,8 +74,18 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     etEmail.requestFocus();
                     return;
                 }
+
                 if (password.isEmpty()){
                     etPassword.setError("password is required");
+                    etPassword.requestFocus();
+                    return;
+                }else if (confirm.isEmpty()){
+                    etConfirm.setError("confirm password is required");
+                    etConfirm.requestFocus();
+                    return;
+                }
+                if (password.equals(confirm)){
+                    etPassword.setError("password not matched");
                     etPassword.requestFocus();
                     return;
                 }
