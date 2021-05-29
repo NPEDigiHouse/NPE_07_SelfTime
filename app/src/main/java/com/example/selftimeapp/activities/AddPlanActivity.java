@@ -58,12 +58,13 @@ public class AddPlanActivity extends AppCompatActivity implements View.OnClickLi
         // add note data to firebase
         FirebaseDatabase.getInstance().getReference()
                 .child("users")
+                .child("plans")
                 .child(etJudul.getText().toString())
                 .setValue(noteMap)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
-                Toast.makeText(AddPlanActivity.this, "Note berhasil ditambahkan.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AddPlanActivity.this, "Plan berhasil ditambahkan.", Toast.LENGTH_SHORT).show();
             }
         });
     }

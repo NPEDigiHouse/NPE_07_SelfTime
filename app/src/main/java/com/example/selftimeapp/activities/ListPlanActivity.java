@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.example.selftimeapp.R;
 import com.example.selftimeapp.adapters.MyNoteAdapter;
 import com.example.selftimeapp.models.Note;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -42,6 +43,13 @@ public class ListPlanActivity extends AppCompatActivity implements MyNoteAdapter
         rvMyNote.setLayoutManager(new LinearLayoutManager(this));
         rvMyNote.setAdapter(adapter);
 
+        // update list
+        updateList();
+
+    }
+
+    private void updateList() {
+
     }
 
     @Override
@@ -55,29 +63,19 @@ public class ListPlanActivity extends AppCompatActivity implements MyNoteAdapter
     @Override
     public void btnDeleteClicked(int position) {
         // get note reference
-        DatabaseReference notesRef = FirebaseDatabase.getInstance().getReference()
-                .child("notes");
-        notesRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        DatabaseReference userPlansRef = FirebaseDatabase.getInstance().getReference()
+                .child("users")
+                .child("plans");
+
+        // delete plan
+        userPlansRef.child(list.get(position).getJudul()).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                int pos = 0;
-                for (DataSnapshot data : snapshot.getChildren()) {
-                    if (pos == position) {
-                        // delete value
-                        if (data.getKey() != null) {
-                            notesRef.child(data.getKey()).removeValue();
-                        }
-                    }
-                    pos++;
-                }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(ListPlanActivity.this, "Terjadi kesalahan pada database.", Toast.LENGTH_SHORT).show();
+            public void onSuccess(Void unused) {
+                Toast.makeText(ListPlanActivity.this, "Note berhasil dihapus", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(ListPlanActivity.this, ListPlanActivity.class));
+                finish();
             }
         });
-        Toast.makeText(this, "Note berhasil dihapus", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(ListPlanActivity.this, ListPlanActivity.class));
-        finish();
+
     }
 }
