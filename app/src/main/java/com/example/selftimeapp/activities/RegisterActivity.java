@@ -1,13 +1,16 @@
-package com.example.selftimeapp;
+package com.example.selftimeapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class EditPlanActivity extends AppCompatActivity {
+import com.example.selftimeapp.R;
+
+public class RegisterActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_plan);
+        setContentView(R.layout.activity_register);
     }
 }

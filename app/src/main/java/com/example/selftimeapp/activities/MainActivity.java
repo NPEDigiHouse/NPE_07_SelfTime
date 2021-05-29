@@ -1,8 +1,10 @@
-package com.example.selftimeapp;
+package com.example.selftimeapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.selftimeapp.R;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -7,7 +7,7 @@
     android:elevation="1dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <TextView
-        android:id="@+id/tv_judul_catatan"
+        android:id="@+id/tv_nama_catatan"
         android:layout_marginTop="10dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -20,14 +20,14 @@
         app:layout_constraintEnd_toStartOf="@id/ib_trash"
         />
     <TextView
-        android:id="@+id/tv_ket_catatan"
+        android:id="@+id/tv_keterangan_catatan"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Ket catatan"
         android:layout_marginLeft="20dp"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_judul_catatan"
+        app:layout_constraintTop_toBottomOf="@id/tv_nama_catatan"
         app:layout_constraintEnd_toStartOf="@id/ib_trash"
         />
 
@@ -41,14 +41,13 @@
         android:layout_centerVertical="true"
         android:elevation="1dp"
         android:background="@color/blue2"
-        android:tint="@color/white"
         android:scaleType="fitCenter"
         android:src="@drawable/ic_baseline_delete_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_goneMarginRight="20dp"
-        />
+        app:tint="@color/white" />
     <ImageButton
         android:id="@+id/ib_edit"
         android:layout_width="35dp"

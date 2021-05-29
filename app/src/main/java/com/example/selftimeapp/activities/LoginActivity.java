@@ -1,7 +1,8 @@
-package com.example.selftimeapp;
+package com.example.selftimeapp.activities;
 
 import android.os.Bundle;
 
+import com.example.selftimeapp.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 

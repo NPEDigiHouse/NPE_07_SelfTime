@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListPlanActivity">
+    tools:context=".activities.ListPlanActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cons_ll"
@@ -49,7 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/cons_lo" />
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_note"
+        android:id="@+id/rv_my_note"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
