@@ -16,10 +16,9 @@ import java.util.List;
 public class ListPlanActivity extends AppCompatActivity implements MyNoteAdapter.OnItemClick {
 
     // recycler attr
-    RecyclerView rvMyNote;
-    MyNoteAdapter adapter;
-    List<Note> list;
-
+    private RecyclerView rvMyNote;
+    private MyNoteAdapter adapter;
+    private List<Note> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
