@@ -1,14 +1,14 @@
 package com.example.selftimeapp.models;
 
 public class Note {
-    private String nama, keterangan;
+    private String judul, keterangan;
 
-    public String getNama() {
-        return nama;
+    public String getJudul() {
+        return judul;
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
+    public void setJudul(String judul) {
+        this.judul = judul;
     }
 
     public String getKeterangan() {
