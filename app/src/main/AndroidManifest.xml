@@ -9,15 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SelfTimeApp">
-        <activity android:name=".EditPlanActivity"></activity>
-        <activity android:name=".ListPlanActivity" />
-        <activity android:name=".AddPlanActivity" />
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".activities.EditPlanActivity"></activity>
+        <activity android:name=".activities.ListPlanActivity" />
+        <activity android:name=".activities.AddPlanActivity" />
+        <activity android:name=".activities.RegisterActivity" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".activities.LoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.SelfTimeApp.NoActionBar" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

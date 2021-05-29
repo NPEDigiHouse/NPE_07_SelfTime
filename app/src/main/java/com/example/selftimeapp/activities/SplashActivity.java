@@ -1,4 +1,4 @@
-package com.example.selftimeapp;
+package com.example.selftimeapp.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import androidx.annotation.Nullable;
+
+import com.example.selftimeapp.R;
 
 public class SplashActivity extends Activity {
 
