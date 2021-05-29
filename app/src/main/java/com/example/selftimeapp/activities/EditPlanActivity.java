@@ -85,6 +85,7 @@ public class EditPlanActivity extends AppCompatActivity implements View.OnClickL
                         if (key != null) {
                             userPlansRef.child(key).child("judul").setValue(newJudul);
                             userPlansRef.child(key).child("keterangan").setValue(newKeterangan);
+                            finish();
                         }
                     }
                     temp++;

@@ -54,8 +54,8 @@ public class MyNoteAdapter extends RecyclerView.Adapter<MyNoteAdapter.ViewHolder
 
             tvNama = itemView.findViewById(R.id.tv_nama_catatan);
             tvKeterangan = itemView.findViewById(R.id.tv_keterangan_catatan);
-            btnEdit = itemView.findViewById(R.id.ib_trash);
-            btnDelete = itemView.findViewById(R.id.ib_edit);
+            btnEdit = itemView.findViewById(R.id.ib_edit);
+            btnDelete = itemView.findViewById(R.id.ib_trash);
 
             btnEdit.setOnClickListener(new View.OnClickListener() {
                 @Override
