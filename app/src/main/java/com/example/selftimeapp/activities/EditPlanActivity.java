@@ -69,9 +69,10 @@ public class EditPlanActivity extends AppCompatActivity implements View.OnClickL
     private void saveData() {
         String newJudul = etJudul.getText().toString();
         String newKeterangan = etKeterangan.getText().toString();
-        DatabaseReference noteRef = FirebaseDatabase.getInstance().getReference()
-                .child("notes");
-        noteRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        DatabaseReference userPlansRef = FirebaseDatabase.getInstance().getReference()
+                .child("users")
+                .child("plans");
+        userPlansRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 int position = getIntent().getIntExtra(EXTRA_POSITION, 0);
@@ -80,8 +81,8 @@ public class EditPlanActivity extends AppCompatActivity implements View.OnClickL
                     if (position == temp) {
                         String key = data.getKey();
                         if (key != null) {
-                            noteRef.child(key).child("judul").setValue(newJudul);
-                            noteRef.child(key).child("keterangan").setValue(newKeterangan);
+                            userPlansRef.child(key).child("judul").setValue(newJudul);
+                            userPlansRef.child(key).child("keterangan").setValue(newKeterangan);
                         }
                     }
                     temp++;
