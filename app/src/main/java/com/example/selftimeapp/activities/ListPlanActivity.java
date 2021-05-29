@@ -49,9 +49,10 @@ public class ListPlanActivity extends AppCompatActivity implements MyNoteAdapter
     }
 
     private void updateList() {
-        // get tim reference
+        // get user plans reference
         DatabaseReference userPlansRef = FirebaseDatabase.getInstance().getReference()
-                .child("teams");
+                .child("users")
+                .child("plans");
         userPlansRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
