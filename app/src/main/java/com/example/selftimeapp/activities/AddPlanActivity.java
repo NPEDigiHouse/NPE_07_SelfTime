@@ -67,6 +67,7 @@ public class AddPlanActivity extends AppCompatActivity implements View.OnClickLi
             @Override
             public void onSuccess(Void unused) {
                 Toast.makeText(AddPlanActivity.this, "Plan berhasil ditambahkan.", Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
     }

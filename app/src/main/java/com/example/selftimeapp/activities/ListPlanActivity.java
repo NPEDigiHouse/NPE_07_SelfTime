@@ -69,6 +69,8 @@ public class ListPlanActivity extends AppCompatActivity implements MyNoteAdapter
         switch (v.getId()) {
             case R.id.btn_add:
                 Intent goToAddPlan = new Intent(this, AddPlanActivity.class);
+                finish();
+                startActivity(new Intent(this, ListPlanActivity.class));
                 startActivity(goToAddPlan);
                 break;
             case R.id.ib_back:
@@ -86,14 +88,18 @@ public class ListPlanActivity extends AppCompatActivity implements MyNoteAdapter
         userPlansRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot data : snapshot.getChildren()) {
-                    // update the adapter's list
-                    Note note = new Note();
-                    note.setJudul(data.child("judul").getValue().toString());
-                    note.setKeterangan(data.child("keterangan").getValue().toString());
-                    list.add(note);
+                if (snapshot.exists()) {
+                    for (DataSnapshot data : snapshot.getChildren()) {
+                        // update the adapter's list
+                        Note note = new Note();
+                        note.setJudul(data.child("judul").getValue().toString());
+                        note.setKeterangan(data.child("keterangan").getValue().toString());
+                        list.add(note);
+                    }
+                    adapter.notifyDataSetChanged();
+                } else {
+                    Toast.makeText(ListPlanActivity.this, "Kamu belum menambahkan note.", Toast.LENGTH_SHORT).show();
                 }
-                adapter.notifyDataSetChanged();
             }
 
             @Override
@@ -108,6 +114,8 @@ public class ListPlanActivity extends AppCompatActivity implements MyNoteAdapter
         Intent goToEdit = new Intent(ListPlanActivity.this, EditPlanActivity.class);
         goToEdit.putExtra(EditPlanActivity.EXTRA_JUDUL, list.get(position).getJudul());
         goToEdit.putExtra(EditPlanActivity.EXTRA_KETERANGAN, list.get(position).getKeterangan());
+        finish();
+        startActivity(new Intent(ListPlanActivity.this, ListPlanActivity.class));
         startActivity(goToEdit);
     }
 
